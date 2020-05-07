@@ -29,3 +29,9 @@ For example, if you don't want the plugin to load on your contact page, located 
 5. Put `wp-block-plugins-on-pages.php` in your `/wp-content/mu-plugins/` folder. (If you don't have a `mu-plugins` folder, you can just create it in the `wp-content` folder.
 
 That's it!
+
+## How it Works
+
+The plugin grabs the URL of the current page and strips out the `http(s)://` portion, then compares it to a list of predetermined URLs (which also have had the `http(s)://` portion stripped out). It also contains a list of predetermined plugins.
+
+If the current URL matches any of the predetermined URLs, it stops the listed plugins from loading.
